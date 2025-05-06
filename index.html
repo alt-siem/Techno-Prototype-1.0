@@ -395,5 +395,21 @@
             document.getElementById("reviewForm").style.display = "none";
         }
     </script>
+    
+    <button id="subscribeButton">Subscribe Now</button>
+    <p id="subscribeMessage"></p>
+
+    <script>
+        document.getElementById("subscribeButton").addEventListener("click", function() {
+            let userEmail = prompt("Enter your email to subscribe:");
+        
+            if (userEmail && userEmail.includes("@")) {
+                document.getElementById("subscribeMessage").innerText = "Thank you for subscribing!";
+                alert("Subscription successful!");
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+        </script>
 </body>
 </html>
