@@ -10,10 +10,10 @@
        
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Times New Roman', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: #DAA520;
             color: #333;
         }
         header {
@@ -23,51 +23,51 @@
             text-align: center;
         }
         header img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
         }
         section {
-            padding: 40px;
+            padding: 50px;
             text-align: center;
         }
         .service, .form-section {
             background: white;
-            padding: 20px;
-            margin: 20px;
+            padding: 50px;
+            margin: 10px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .service img {
-            width: 400px;
-            height: 250px;
+            width: 500px;
+            height: 350px;
             object-fit: cover;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
         .service button, .back-button {
-            background: #3498db;
+            background: #0F52BA;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 15px 25px;
             cursor: pointer;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .service button:hover, .back-button:hover {
             background: #2980b9;
         }
         form input, form textarea {
             width: 80%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 10px;
         }
         button {
             background: #3498db;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 25px 35px;
             cursor: pointer;
             border-radius: 5px;
         }
@@ -80,10 +80,10 @@
         
         #subscribeButton {
     		display: block;
-    		margin: 20px auto; /* Centers horizontally */
+    		margin: 10px auto; /* Centers horizontally */
     		text-align: center; 
-    		padding: 10px 20px;
-    		background: #3498db;
+    		padding: 15px 20px;
+    		background: #DAA520;
     		color: white;
     		border: none;
     		border-radius: 5px;
@@ -91,19 +91,19 @@
 		}
 
 		#subscribeButton:hover {
-    		background: #2980b9;
+    		background: #DAA520;
 		}
     </style>
 </head>
 <body>
     <header>
-        <h1 style="font-size: 32px;">Welcome to Block Build</h1>
-        <p style="font-size: 14px;">Your trusted source for quality civil engineering contract services.</p>
+        <h1 style="font-size: 30px;">Welcome to BLOCK BUILD!</h1>
+        <p style="font-size: 15px;">Your trusted source for quality civil engineering contract services.</p>
         <img src="https://www.thomasandhutton.com/wp-content/uploads/2023/05/Gorodenkoff-construction-1-2048x1152.jpg" alt="Civil Engineering Banner">
     </header>
     <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.85">
     <title>Looping Videos</title>
     <style>
         body {
@@ -111,7 +111,7 @@
             justify-content: space-around;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
+            margin: 10;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -121,7 +121,7 @@
         }
         @media (max-width: 768px) {
             video, iframe {
-                width: 90%;
+                width: 80%;
                 height: auto;
             }
         }
@@ -150,17 +150,17 @@
 </body>
 
     <section id="services">
-        <h2 style="font-size: 26px;">Our Services</h2>
+        <h2 style="font-size: 35px;">Our Services</h2>
         <div class="service">
-            <h3 style="font-size: 20px;">Contract Generation</h3>
+            <h3 style="font-size: 25px;">Contract Generation</h3>
             <img src="https://counselforcreators.com/wp-content/uploads/2019/07/AdobeStock_67425246.jpeg" alt="Contract Generation">
-            <p>We provide automated and customized contract generation for civil engineering projects.</p>
+            <h3 style="font-size: 13px;">We provide automated and customized contract generation for civil engineering projects.</h3>
             <button onclick="showForm('contractForm')">PROCEED</button>
         </div>
         <div class="service">
-            <h3 style="font-size: 20px;">Legal Document Review</h3>
+            <h3 style="font-size: 25px;">Legal Document Review</h3>
             <img src="https://www.cflowapps.com/wp-content/uploads/2023/04/documnt_reviewprocess.jpg" alt="Legal Document Review">
-            <p>Ensure your civil engineering contracts and agreements are legally sound.</p>
+            <h3 style="font-size: 13px;">Ensure your civil engineering contracts and agreements are legally sound.</h3>
             <button onclick="showForm('reviewForm')">PROCEED</button>
         </div>
     </section>
@@ -177,7 +177,7 @@
         .signature {
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .signature div {
             text-align: center;
@@ -223,7 +223,7 @@
                 <input type="text" id="party_b" required>
             </div>
             <div class="form-group">
-                <label>Address:</label>
+                <label>Party B Address:</label>
                 <input type="text" id="b_address" required>
             </div>
             <div class="form-group">
@@ -394,8 +394,9 @@
         <input type="text" placeholder="Document Title" >
         <input type="file" >
         <input type="email" placeholder="Email Address" >
-        <button type="click" onclick>Wait on Email</button>
         </form>
+        <button id="subscribeButton">SUBSCRIBE NOW</button>
+         <p id="subscribeMessage"></p>
         <button class="back-button" onclick="goBack()">Back</button>
     </section>
     
@@ -412,12 +413,12 @@
         }
     </script>
     
-    <button id="subscribeButton">Subscribe Now</button>
-    <p id="subscribeMessage"></p>
+    
+   
 
     <script>
         document.getElementById("subscribeButton").addEventListener("click", function() {
-            let userEmail = prompt("Enter your email to subscribe:");
+            let userEmail = prompt("To use more features, SUBSCRIBE!");
         
             if (userEmail && userEmail.includes("@")) {
                 document.getElementById("subscribeMessage").innerText = "Thank you for subscribing!";
@@ -427,5 +428,6 @@
             }
         });
         </script>
+        
 </body>
 </html>
