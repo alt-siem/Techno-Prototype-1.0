@@ -93,6 +93,14 @@
 		#subscribeButton:hover {
     		background: #DAA520;
 		}
+        .signature button {
+    		display: block;
+    		margin: 10px auto; /* Centers button */
+            padding: 8px 12px; /* Reducing padding */
+    		font-size: 12px; /* Making the text smaller */
+    		border-radius: 4px; /* Keeping a slight rounded effect */
+
+		}
     </style>
 </head>
 <body>
@@ -237,17 +245,21 @@
         <p style="text-align: justify; font-size: 14px;">BEFORE ME, personally appeared the authorized representatives, known to be the same persons who executed the foregoing CONTRACT AGREEMENT and acknowledged to me that it is true and correct.</p>
         
         <div class="signature">
-            <div>
-                <p>Procurement Entity</p>
-                <canvas id="signature1"></canvas>
-            </div>
-            <div>
-                <p>Contractor</p>
-                <canvas id="signature2"></canvas>
+    		<div>
+        		<p>Procurement Entity</p>
+        		<canvas id="signature1"></canvas>
+        		<button onclick="clearCanvas('signature1')">Clear Signature</button>
+    		</div>
+    		<div>
+        		<p>Contractor</p>
+        		<canvas id="signature2"></canvas>
+        		<button onclick="clearCanvas('signature2')">Clear Signature</button>
+    		</div>
+		</div>
             </div>
         </div>
     </div>
-
+	
 
 
     <script>
@@ -382,11 +394,17 @@
             initializeCanvas('signature1');
             initializeCanvas('signature2');
         };
+        
+        function clearCanvas(canvasID) {
+    		const canvas = document.getElementById(canvasID);
+    		const ctx = canvas.getContext("2d");
+    		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		}
     </script>
 </body>
 
 
-        <button class="back-button" onclick="goBack()">Back</button>
+    <button class="back-button" onclick="goBack()">Back</button>
     </section>
     <section id="reviewForm" class="form-section">
         <h2>Legal Document Review Form</h2>
@@ -412,10 +430,6 @@
             document.getElementById("reviewForm").style.display = "none";
         }
     </script>
-    
-    
-   
-
     <script>
         document.getElementById("subscribeButton").addEventListener("click", function() {
             let userEmail = prompt("To use more features, SUBSCRIBE!");
@@ -427,7 +441,7 @@
                 alert("Please enter a valid email address.");
             }
         });
-        </script>
+    </script>
         
 </body>
 </html>
