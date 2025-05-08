@@ -412,7 +412,7 @@
         <input type="file" >
         <input type="email" placeholder="Email Address" >
         </form>
-        <button id="subscribeButton">SUBSCRIBE NOW</button>
+        <button id="subscribeButton">REVIEW</button>
          <p id="subscribeMessage"></p>
         <button class="back-button" onclick="goBack()">Back</button>
     </section>
@@ -431,7 +431,7 @@
     </script>
     <script>
         document.getElementById("subscribeButton").addEventListener("click", function() {
-            let userEmail = prompt("To use more features, SUBSCRIBE!");
+            let userEmail = prompt("To use this feature, SUBSCRIBE!");
         
             if (userEmail && userEmail.includes("@")) {
                 document.getElementById("subscribeMessage").innerText = "Thank you for subscribing!";
